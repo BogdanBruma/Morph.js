@@ -7,10 +7,10 @@ function Morph() {
                 var args = morph.slice(0, morph.length - 1);
 
                 return args.length === argv.length && args.every(function(checks, i) {
-                        return checks.every(function(check) {
-                            return check.call(check, argv[i]);
-                        });
+                    return checks.every(function(check) {
+                        return check.call(check, argv[i]);
                     });
+                });
             });
 
         if (matchedMorphs.length === 0) {
