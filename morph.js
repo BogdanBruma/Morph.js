@@ -6,8 +6,7 @@ function Morph() {
             matchedMorphs = morphs.filter(function(morph) {
                 var args = morph.slice(0, morph.length - 1);
 
-                return args.length === argv.length &&
-                	args.every(function(checks, i) {
+                return args.length === argv.length && args.every(function(checks, i) {
                         return checks.every(function(check) {
                             return check.call(check, argv[i]);
                         });
