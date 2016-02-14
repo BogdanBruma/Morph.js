@@ -1,3 +1,5 @@
+var module = module || {};
+
 function Morph() {
     var morphs = [].slice.call(arguments);
 
@@ -24,3 +26,5 @@ function Morph() {
         return matchedMorphs[0][matchedMorphs[0].length - 1].apply(this, argv);
     };
 }
+
+module.exports = Morph;
